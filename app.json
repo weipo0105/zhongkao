@@ -1,12 +1,14 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/video/video",
+    "pages/evaluate/evaluate",
+    "pages/school/school"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "中考体育教学训练软件",
     "navigationBarTextStyle":"black"
   }
 }
