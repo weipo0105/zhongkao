@@ -33,7 +33,7 @@
     <view class='delimiter-level'></view>
 
     <view class='intro-item'>
-      <image src='/images/index/intro-img1.png'></image>
+      <image src='/images/index/intro-img2.png'></image>
     </view>
     <view class='intro-title'>
       科研团队
@@ -45,7 +45,7 @@
     <view class='delimiter-level'></view>
 
     <view class='intro-item'>
-      <image src='/images/index/intro-img1.png'></image>
+      <image src='/images/index/intro-img3.png'></image>
     </view>
     <view class='intro-title'>
       标准示范
@@ -57,7 +57,7 @@
     <view class='delimiter-level'></view>
 
     <view class='intro-item'>
-      <image src='/images/index/intro-img1.png'></image>
+      <image src='/images/index/intro-img4.png'></image>
     </view>
     <view class='intro-title'>
       成绩评测系统
@@ -81,5 +81,6 @@
       <view class='item-text'>已开通学校</view>
     </view>
   </view>
-
+  <!-- intro3 -->
+  <view class='intro3'><image src='/images/index/intro3.jpg'></image></view>
 </view>
