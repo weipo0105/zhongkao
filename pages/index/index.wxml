@@ -68,6 +68,18 @@
 
   </view>
 
-
+  <!-- intro2部分 -->
+  <view class='intro2-container'>
+    <view class='intro2-item'>
+      <image src='/images/index/intro2-1.png'></image>
+      <view class='item-num'>26,000</view>
+      <view class='item-text'>评测人次</view>
+    </view>
+    <view class='intro2-item'>
+      <image src='/images/index/intro2-2.png'></image>
+      <view class='item-num'>300</view>
+      <view class='item-text'>已开通学校</view>
+    </view>
+  </view>
 
 </view>
