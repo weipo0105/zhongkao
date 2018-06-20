@@ -23,19 +23,19 @@
       "selectedIconPath":"images/index/home-selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/video/video",
         "text": "视频课程",
         "iconPath":"images/index/video.png",
         "selectedIconPath":"images/index/video-selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/evaluate/evaluate",
         "text": "成绩评测",
         "iconPath": "images/index/evaluate.png",
         "selectedIconPath": "images/index/evaluate-selected.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/school/school",
         "text": "学校入口",
         "iconPath": "images/index/school.png",
         "selectedIconPath": "images/index/school-selected.png"

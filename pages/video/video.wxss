@@ -1,1 +1,59 @@
 /* pages/video/video.wxss */
+page{
+    background: #212633;
+}
+.video-container{
+  width: 100%;
+  height: 100%;
+  color: #fff;
+
+}
+.video-info{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+  background: #15161d;
+  justify-content: space-around;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+.video-info-item{
+  color: #4bdc95;
+}
+.video-data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+}
+
+.video-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin-left: 30rpx; 
+}
+.video-title-learn{
+  width: 60%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+}
+.video-title{
+  font-size: 32rpx;
+}
+.video-learnNum{
+  font-size: 22rpx;
+}
+.arrow-right{
+  width: 50rpx;
+  height: 50rpx;
+}
+.delimiter-level{
+  border: 1rpx solid #4bdc95;
+}
