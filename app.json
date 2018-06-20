@@ -7,8 +7,39 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#15161d",
     "navigationBarTitleText": "中考体育教学训练软件",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar":{
+    "borderStyle":"#15161d",
+    "position":"bottom",
+    "backgroundColor":"#15161d",
+    "list":[
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/index/home.png",
+      "selectedIconPath":"images/index/home-selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "视频课程",
+        "iconPath":"images/index/video.png",
+        "selectedIconPath":"images/index/video-selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "成绩评测",
+        "iconPath": "images/index/evaluate.png",
+        "selectedIconPath": "images/index/evaluate-selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "学校入口",
+        "iconPath": "images/index/school.png",
+        "selectedIconPath": "images/index/school-selected.png"
+      }
+    ]
   }
 }
