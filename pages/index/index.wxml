@@ -1,6 +1,73 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    首页
+
+<!-- banner部分 -->
+  <swiper class='swwiper' indicator-dots="false" autoplay='true' interval='2000'>
+    <swiper-item>
+      <image class='swiper-item' src='/images/index/banner1.jpg'></image>
+    </swiper-item>
+    <swiper-item>
+      <image class='swiper-item' src='/images/index/banner1.jpg'></image>
+    </swiper-item>
+  </swiper>
+
+<!-- nav部分 -->
+  <view class='nav-container'>
+    <view class='nav-item'><view class='point'>·</view><view class='nav-title'>视频课程</view></view>
+    <view class='nav-item'><view class='point'>·</view><view class='nav-title'>成绩测评</view></view>
+    <view class='nav-item'><view class='point'>·</view><view class='nav-title'>使用说明</view></view>
   </view>
+
+<!-- intro部分 -->
+  <view class='intro-container'>
+    <view class='intro-item'>
+      <image src='/images/index/intro-img1.png'></image>
+    </view>
+    <view class='intro-title'>
+      5年专注
+    </view>
+    <view class='intro-text'>
+      北京体育大学出版社暨北京知星科技通过5年对中考体育历年数据分析，以及数次中考体育辅助教学产品的升级，产品拥有更有效、更专业、更快捷的教学效果
+    </view>
+
+    <view class='delimiter-level'></view>
+
+    <view class='intro-item'>
+      <image src='/images/index/intro-img1.png'></image>
+    </view>
+    <view class='intro-title'>
+      科研团队
+    </view>
+    <view class='intro-text'>
+      视频课程中的动作示范模特，都来自北京体育大学、首都体育学院等体育院校的专业运动员，让教学示范精准
+    </view>
+
+    <view class='delimiter-level'></view>
+
+    <view class='intro-item'>
+      <image src='/images/index/intro-img1.png'></image>
+    </view>
+    <view class='intro-title'>
+      标准示范
+    </view>
+    <view class='intro-text'>
+      可以通过学生考试项目的测试数据进行录入，系统将根据该学校所在地区的考试标准和分数标准进行计算评分
+    </view>
+
+    <view class='delimiter-level'></view>
+
+    <view class='intro-item'>
+      <image src='/images/index/intro-img1.png'></image>
+    </view>
+    <view class='intro-title'>
+      成绩评测系统
+    </view>
+    <view class='intro-text'>
+      可以通过学生考试项目的测试数据进行录入，系统将根据该学校所在地区的考试标准和分数标准进行计算评分
+    </view>
+
+  </view>
+
+
+
 </view>
