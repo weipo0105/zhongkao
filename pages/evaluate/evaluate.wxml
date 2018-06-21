@@ -2,7 +2,7 @@
 
 <form>
 <!-- 第一步 -->
-<view class='step1'>
+<view class='step1 '>
   <view class="section">
     <view class="section__title">姓名：</view>
     <input type='text'  name="input" value="" placeholder="请输入姓名" />
@@ -41,7 +41,7 @@
 </view>
 
   <!-- 第二步 -->
-  <view class='step2'>
+  <view class='step2 '>
     <view class="section">
       <view class="section__title">身高：</view>
       <input type='text'  name="input" value="" />
