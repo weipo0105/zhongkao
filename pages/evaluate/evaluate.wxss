@@ -1,1 +1,7 @@
 /* pages/evaluate/evaluate.wxss */
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}

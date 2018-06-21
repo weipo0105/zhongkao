@@ -1,2 +1,241 @@
 <!--pages/evaluate/evaluate.wxml-->
-<text>pages/evaluate/evaluate.wxml</text>
+
+<form>
+<!-- 第一步 -->
+<view class='step1'>
+  <view class="section">
+    <view class="section__title">姓名：</view>
+    <input type='text'  name="input" value="" placeholder="请输入姓名" />
+  </view>
+  <view class="section section_gap">
+    <view class="section__title">性别：</view>
+    <radio-group name="radio-group">
+      <label><radio value="radio1"/>男</label>
+      <label><radio value="radio2"/>女</label>
+    </radio-group>
+  </view>
+  <view class="section">
+    <view class="section__title">年龄：</view>
+    <input type='text'  name="input"  value="" placeholder="请输入年龄" />
+  </view>
+  <view class="section">
+    <view class="section__title">学号：</view>
+    <input type='text'  name="input"  value="" placeholder="请输入学号" />
+  </view>
+  <view class="section">
+    <view class="section__title">电话：</view>
+    <input type='text'  name="input"  value="" placeholder="请输入电话" />
+  </view>
+  <view class="section">
+    <view class="section__title">学校：</view>
+    <input type='text'  name="input"  value="" placeholder="请输入学校名称" />
+  </view>
+  <view class="section">
+    <view class="section__title">地区：</view>
+    <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+      <view class="picker">
+        当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+      </view>
+    </picker>
+  </view>
+</view>
+
+  <!-- 第二步 -->
+  <view class='step2'>
+    <view class="section">
+      <view class="section__title">身高：</view>
+      <input type='text'  name="input" value="" />
+    </view>
+    <view class="section">
+      <view class="section__title">体重：</view>
+      <input type='text'  name="input" value="" />
+    </view>
+    <view class="section">
+      <view class="section__title">肺活量：</view>
+      <input type='text'  name="input" value="" />
+    </view>
+    <view class="section">
+      <view class="section__title">皮脂：</view>
+      <input type='text'  name="input" value="" />
+    </view>
+
+    <view>身体素质测试项目</view>
+    <view>
+      <text>测试项目</text>
+      <text>测试数据</text>
+    </view>
+
+    <view>
+      <view>
+        <text>肩关节活动幅度</text>
+        <text>评级：A级 B级 C级</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>下肢力量（次）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+    
+    <view>
+      <view>
+        <text>上肢力量（推）（次）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>上肢力量（拉）（次）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+    
+    <view>
+      <view>
+        <text>下肢爆发力（米）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>上肢爆发力（米）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>反应速度（秒）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>灵敏能力（秒）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>核心耐力（秒）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view>
+        <text>心肺耐力（秒）</text>
+      </view>
+      <view>
+        <radio-group name='radio-group'>
+          <label><radio value='radio1'/>A</label>
+          <label><radio value='radio1'/>B</label>
+          <label><radio value='radio1'/>C</label>
+        </radio-group>
+      </view>
+    </view>
+
+  </view>
+
+  
+
+  <!-- 第三步 -->
+  <view class='step3'>
+    <view class="section">
+      <view class="section__title">足球运球（秒）：</view>
+      <input type='text'  name="input" value=""  />
+    </view>
+
+    <view class="section">
+      <view class="section__title">1000米（分）：</view>
+      <input type='text'  name="input" value=""  />
+    </view>
+
+    <view class="section">
+      <view class="section__title">800米（分）：</view>
+      <input type='text'  name="input" value=""  />
+    </view>
+
+    <view class="section">
+      <view class="section__title">引体向上（次）：</view>
+      <input type='text'  name="input" value=""  />
+    </view>
+
+    <view class="section">
+      <view class="section__title">仰卧起坐（次）：</view>
+      <input type='text'  name="input" value=""  />
+    </view>
+
+    <view class="section">
+      <view class="section__title">掷实心球（米）：</view>
+      <input type='text' name="input" value=""  />
+    </view>
+  </view>
+
+  <!-- 提交 -->
+  <view class="btn-area">
+    <button formType="submit">Submit</button>
+    <button formType="reset">Reset</button>
+  </view>
+</form>
