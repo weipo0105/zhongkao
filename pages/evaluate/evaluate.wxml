@@ -15,12 +15,12 @@
     <view class='header-bar'>
       <view class='header-bar-item'>
         <view class='item-num done'>1</view>
-        <text class='item-text'>身体素质</text>
+        <text class='item-text'>基本信息</text>
       </view>
 
       <view class='header-bar-item'>
         <view class='item-num notdone'>2</view>
-        <text class='item-text'>基本信息</text>
+        <text class='item-text'>身体素质</text>
       </view>
 
       <view class='header-bar-item'>
@@ -29,11 +29,11 @@
       </view>
     </view>
 
-    <view class="username row bg-white">
-      <view class="section__title">姓名：</view>
-      <input type='text'  name="input" value="" placeholder="请输入姓名" />
+    <view class="inputView row bg-white">
+      <view class="inputView-title">姓名：</view>
+      <input type='text' name="input" value="" placeholder="请输入姓名" />
     </view>
-    <view class='sex-age row bg-black'>
+    <view class='inputView sex-age row bg-black'>
       <view class="sex row bg-black">
         <view class=" ">性别：</view>
         <radio-group name="radio-group">
@@ -42,64 +42,70 @@
         </radio-group>
       </view>
       <view class="age row  bg-black">
-        <view class="">年龄：</view>
-        <input placeholder-class='' type='text'  name="input"  value="" placeholder="请输入年龄" />
+        <view class="age-title">年龄：</view>
+        <input placeholder-style="font-size:38rpx;line-height:70rpx;width:80rpx;height:70rpx;" type='text'  name="input"  value="" placeholder="年龄" />
       </view>
     </view>
     
-    <view class="row bg-white">
-      <view class="section__title">学号：</view>
-      <input type='text'  name="input"  value="" placeholder="请输入学号" />
+    <view class="inputView row bg-white">
+      <view class="inputView-title">学号：</view>
+      <input class='inputView-input' type='text'  name="input"  value="" placeholder="请输入学号" />
     </view>
-    <view class="row bg-black">
-      <view class="section__title">电话：</view>
-      <input type='text'  name="input"  value="" placeholder="请输入电话" />
+    <view class="inputView row bg-black">
+      <view class="inputView-title">电话：</view>
+      <input class='inputView-input' type='text'  name="input"  value="" placeholder="请输入电话" />
     </view>
-    <view class="row bg-white">
-      <view class="section__title">学校：</view>
-      <input type='text'  name="input"  value="" placeholder="请输入学校名称" />
+    <view class="inputView row bg-white">
+      <view class="inputView-title">学校：</view>
+      <input class='inputView-input' type='text'  name="input"  value="" placeholder="请输入学校名称" />
     </view>
-    <view class="row bg-black">
-      <view class="section__title">地区：</view>
+    <view class="inputView row bg-black">
+      <view class="inputView-title">地区：</view>
       <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
         <view class="picker">
           当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
         </view>
       </picker>
     </view>
+    
+    <view class="body-info row bg-white">
+      <view class="body-info-item-title">身高：</view>
+      <input type='text' placeholder-style="font-size:38rpx;line-height:70rpx;width:130rpx;height:70rpx;"  name="input" placeholder='' value="" />
+      <view class="height">cm</view>
+    </view>
+    <view class="body-info row bg-black">
+      <view class="body-info-item-title">体重：</view>
+      <input type='text' placeholder-style="font-size:38rpx;line-height:70rpx;width:130rpx;height:70rpx;"  name="input" placeholder='' value="" />
+      <view class="height">kg</view>
+    </view>
+    
+    <view class="body-info row bg-white">
+      <view class="">肺活量：</view>
+      <input type='text' placeholder-style="font-size:38rpx;line-height:70rpx;width:130rpx;height:70rpx;"  name="input" placeholder='' value="" />
+      <view class="height">ml</view>
+    </view>
+    <view class="body-info row bg-black">
+      <view class="">皮脂：</view>
+      <input type='text' placeholder-style="font-size:38rpx;line-height:70rpx;width:130rpx;height:70rpx;" name="input" placeholder='' value="" />
+      <view class="height">%</view>
+    </view>
+
+    <view class='stepBtns row'>
+      <view class='stepBtn'>
+        下一步
+      </view>
+    </view>
   </view>
 
     <!-- 第二步 -->
     <view class='step2 '>
-      <view class="row">
-        <view class="section__title">身高：</view>
-        <input type='text'  name="input" value="" />
-      </view>
-      <view class="row">
-        <view class="section__title">体重：</view>
-        <input type='text'  name="input" value="" />
-      </view>
-      <view class="row">
-        <view class="section__title">肺活量：</view>
-        <input type='text'  name="input" value="" />
-      </view>
-      <view class="row">
-        <view class="section__title">皮脂：</view>
-        <input type='text'  name="input" value="" />
-      </view>
 
-      <view>身体素质测试项目</view>
-      <view class='row'>
-        <text>测试项目</text>
-        <text>测试数据</text>
-      </view>
-
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-black'>
+        <view class='body-quality-title'>
           <text>肩关节活动幅度</text>
-          <text>评级：A级 B级 C级</text>
+          <!-- <text>评级：A级 B级 C级</text> -->
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -108,11 +114,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-white'>
+        <view class='body-quality-title'>
           <text>下肢力量(次)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -121,11 +127,11 @@
         </view>
       </view>
       
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-black'>
+        <view class='body-quality-title'>
           <text>上肢力量(推)(次)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -134,11 +140,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-white'>
+        <view class='body-quality-title'>
           <text>上肢力量(拉)(次)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -147,11 +153,11 @@
         </view>
       </view>
       
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-black'>
+        <view class='body-quality-title'>
           <text>下肢爆发力(米)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -160,11 +166,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-white'>
+        <view class='body-quality-title'>
           <text>上肢爆发力(米)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -173,11 +179,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-black'>
+        <view class='body-quality-title'>
           <text>反应速度(秒)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -186,11 +192,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-white'>
+        <view class='body-quality-title'>
           <text>灵敏能力(秒)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -199,11 +205,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-black'>
+        <view class='body-quality-title'>
           <text>核心耐力(秒)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -212,11 +218,11 @@
         </view>
       </view>
 
-      <view class='row'>
-        <view>
+      <view class='body-quality row bg-white'>
+        <view class='body-quality-title'>
           <text>心肺耐力(秒)</text>
         </view>
-        <view>
+        <view class='body-quality-radio'>
           <radio-group name='radio-group'>
             <label><radio value='radio1'/>A</label>
             <label><radio value='radio1'/>B</label>
@@ -225,47 +231,56 @@
         </view>
       </view>
 
+      <view class='stepBtns row'>
+        <view class='stepBtn'>
+            上一步
+          </view>
+          <view class='stepBtn'>
+            下一步
+          </view>
+      </view>
+    
     </view>
 
     
 
     <!-- 第三步 -->
     <view class='step3'>
-      <view class="row">
-        <view class="section__title">足球运球(秒)：</view>
-        <input type='text'  name="input" value=""  />
+      <view class="subject row bg-white">
+        <view class="subject-title">足球运球(秒)：</view>
+        <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
       </view>
 
-      <view class="row">
-        <view class="section__title">1000米(分)：</view>
-        <input type='text'  name="input" value=""  />
+      <view class="subject row bg-black">
+        <view class="subject-title">1000米(分)：</view>
+        <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
       </view>
 
-      <view class="row">
-        <view class="section__title">800米(分)：</view>
-        <input type='text'  name="input" value=""  />
+      <view class="subject row bg-white">
+        <view class="subject-title">800米(分)：</view>
+        <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
       </view>
 
-      <view class="row">
-        <view class="section__title">引体向上(次)：</view>
-        <input type='text'  name="input" value=""  />
+      <view class="subject row bg-black">
+        <view class="subject-title">引体向上(次)：</view>
+        <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
       </view>
 
-      <view class="row">
-        <view class="section__title">仰卧起坐(次)：</view>
-        <input type='text'  name="input" value=""  />
+      <view class="subject row bg-white">
+        <view class="subject-title">仰卧起坐(次)：</view>
+        <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
       </view>
 
-      <view class="row">
-        <view class="section__title">掷实心球(米)：</view>
-        <input type='text' name="input" value=""  />
+      <view class="subject row bg-black">
+        <view class="subject-title">掷实心球(米)：</view>
+        <input class="subject-input" type='text' name="input" value="" placeholder='123' />
       </view>
     </view>
 
     <!-- 提交 -->
-    <view class="btn-area">
-      <button formType="submit">Submit</button>
-      <button formType="reset">Reset</button>
+    <view class="stepBtns row">
+      <button class='stepBtn' formType="submit">提交</button>
+      <button class='stepBtn' formType="reset">重置</button>
     </view>
   </form>
 

@@ -1,19 +1,37 @@
 /* pages/evaluate/evaluate.wxss */
+
+/* common */
 .show{
   display: block;
 }
 .hide{
   display: none;
 }
+.stepBtns{
+  justify-content: center;
+}
+.stepBtn{
+  width: 165rpx;
+  height: 80rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #4bdc95;
+  margin: 10rpx;
+}
+
 .eval-header{
   background: #000000;
   width: 100%;
-  height: 50rpx;
+  height: 60rpx;
   color: #fff;
-  font-size: 32rpx;
+  font-size: 30rpx;
   display: flex;
   flex: row;
   justify-content: space-around;
+  align-items: center;
 }
 .ceping-img{
   display: flex;
@@ -57,7 +75,7 @@
   /* background: #4bdc95; */
   margin-top: 25rpx;
   text-align: center;
-  font-size: 32rpx;
+  font-size: 36rpx;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -68,7 +86,6 @@
   height:60rpx;
   border-radius: 10rpx;
   line-height: 60rpx;
-  
 }
 .done{
   background:#4bdc95;
@@ -79,11 +96,14 @@
   color: #333333;
 }
 .item-text{
-  width: 125rpx;
+  width: 145rpx;
   height: 80rpx;
   text-align: center;
   margin-top: 25rpx;
 }
+
+/* 第一步 */
+
 .row{
   display: flex;
   flex-direction: row;
@@ -104,8 +124,97 @@
   width: 50%;
 }
 .age{
-   width: 50%; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%; 
+  height: 70rpx;
+}
+.age-title{
+  width: 110rpx;
+  height: 70rpx;
+}
+
+.age input{
+  height: 70rpx;
+  width: 40rpx;
+  margin-left: 0rpx;
 }
 .sex-age{
   justify-content: space-around;
+}
+.inputView{
+  padding-left: 100rpx;
+  font-size: 32rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  align-items: center;
+  justify-content: flex-start;
+}
+.inputView-title{
+  width: 15%;
+}
+.inputView-input{
+  width: 60%;
+}
+
+.inputView input{
+  width: 60%;
+}
+radio .wx-radio-input{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+}
+.body-info{
+  padding-left: 100rpx;
+  font-size: 32rpx;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  align-items: center;
+  justify-content: flex-start;
+}
+.body-info input{
+  width: 130rpx;
+}
+
+/* 第二步 */
+.body-quality{
+  justify-content: space-between;
+  font-size: 32rpx;
+}
+.body-quality label{
+  margin: 10rpx;
+}
+.body-quality-title{
+  width: 40%;
+  height: 70rpx;
+  margin-left: 20rpx;
+  line-height: 70rpx;
+  text-align: right;
+}
+.body-quality-radio{
+  width:48%;
+  height:70rpx;
+  margin-right:13rpx;
+  line-height: 70rpx;
+}
+
+/* 第三步 */
+.subject-title{
+  width: 50%;
+  height: 70rpx;
+  margin-left: 20rpx;
+  line-height: 70rpx;
+  text-align: right;
+}
+.subject-input{
+  width:50%;
+  height:70rpx;
+  margin-right:13rpx;
+  margin-left:32rpx;
+  line-height: 70rpx;
 }
