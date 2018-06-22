@@ -11,7 +11,45 @@
     </view>
   </view>
 
-  <view class='score-evaluate'>成绩测评</view>
+  <view class='score-evaluate column'>
+    <view class='score-view-header row'>
+      <view class='score-header'>成绩测评:</view>
+      <view class='date-header'>测评日期：2018-6-8</view>
+    </view>
+    <view class='row'>
+      <view class='table'>
+        <view class='th row '>
+          <view class='td td1 th-style'>项目</view>
+          <view class='td td2 th-style'>数据</view>
+          <view class='td td3 th-style'>成绩</view>
+        </view>
+        <view class='tr row'>
+          <view class='td td1'>足球运动</view>
+          <view class='td td2'>50</view>
+          <view class='td td3'>0</view>
+        </view>
+        <view class='tr row'>
+          <view class='td td1'>1000米</view>
+          <view class='td td2'>3分</view>
+          <view class='td td3'>10</view>
+        </view>
+        <view class='tr row'>
+          <view class='td td1'>引体向上</view>
+          <view class='td td2'>10次</view>
+          <view class='td td3'>8.5</view>
+        </view>
+        <view class='tr row'>
+          <view class='td td1'>掷实心球</view>
+          <view class='td td2'>123米</view>
+          <view class='td td3'>10</view>
+        </view>
+      </view>
+      <view class='chart column'>
+        <image src='/images/report/score-evaluate.png'></image>
+        <text>北京总分:30分</text>
+        </view>
+    </view>
+  </view>
   <view class='body-evaluate'>身体素质综合评价</view>
   <view class='advice'>教学与训练建议(定制化方案)</view>
   <view class='video'>教学训练视频课程</view>
