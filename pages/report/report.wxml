@@ -1,0 +1,18 @@
+<view class='report-container'>
+  <view class='header'>中考体育成绩及身体素质测评报告</view>
+  <view class='userinfo row'>
+    <view class='userinfo-detail column'>
+      <view class='name'>张三丰</view>
+      <text>性别：男　年龄：12</text>
+    </view>
+    <view class='share row'>
+      <image src="/images/report/weixin.png"></image>
+      <view>分享给朋友</view>
+    </view>
+  </view>
+
+  <view class='score-evaluate'>成绩测评</view>
+  <view class='body-evaluate'>身体素质综合评价</view>
+  <view class='advice'>教学与训练建议(定制化方案)</view>
+  <view class='video'>教学训练视频课程</view>
+</view>

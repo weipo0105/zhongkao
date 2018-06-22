@@ -11,7 +11,7 @@
   </view>
   <form>
   <!-- 第一步 -->
-  <view class='step1 '>
+  <view class="step1 {{showView1?'show':'hide'}}">
     <view class='header-bar'>
       <view class='header-bar-item'>
         <view class='item-num done'>1</view>
@@ -90,7 +90,7 @@
       <view class="height">%</view>
     </view>
 
-    <view class='stepBtns row'>
+    <view catchtap="toStep2" class='stepBtns row'>
       <view class='stepBtn'>
         下一步
       </view>
@@ -98,8 +98,23 @@
   </view>
 
     <!-- 第二步 -->
-    <view class='step2 '>
+    <view class="step2 {{showView2?'show':'hide'}}">
+      <view class='header-bar'>
+        <view class='header-bar-item'>
+          <view class='item-num done'>1</view>
+          <text class='item-text'>基本信息</text>
+        </view>
 
+        <view class='header-bar-item'>
+          <view class='item-num done'>2</view>
+          <text class='item-text'>身体素质</text>
+        </view>
+
+        <view class='header-bar-item'>
+          <view class='item-num notdone'>3</view>
+          <view class='item-text'>测试项目</view>
+        </view>
+      </view>
       <view class='body-quality row bg-black'>
         <view class='body-quality-title'>
           <text>肩关节活动幅度</text>
@@ -232,12 +247,18 @@
       </view>
 
       <view class='stepBtns row'>
-        <view class='stepBtn'>
-            上一步
-          </view>
+        <view catchtap='toStep1'>
+          <view class='stepBtn'>
+              上一步
+            </view>
+        </view>
+
+        <view catchtap='toStep3'>
           <view class='stepBtn'>
             下一步
           </view>
+        </view> 
+          
       </view>
     
     </view>
@@ -245,7 +266,25 @@
     
 
     <!-- 第三步 -->
-    <view class='step3'>
+    <view class="step3 {{showView3?'show':'hide'}}">
+
+    <view class='header-bar'>
+      <view class='header-bar-item'>
+        <view class='item-num done'>1</view>
+        <text class='item-text'>基本信息</text>
+      </view>
+
+      <view class='header-bar-item'>
+        <view class='item-num done'>2</view>
+        <text class='item-text'>身体素质</text>
+      </view>
+
+      <view class='header-bar-item'>
+        <view class='item-num done'>3</view>
+        <view class='item-text'>测试项目</view>
+      </view>
+    </view>
+
       <view class="subject row bg-white">
         <view class="subject-title">足球运球(秒)：</view>
         <input class="subject-input" type='text'  name="input" value="" placeholder='123' />
@@ -275,13 +314,20 @@
         <view class="subject-title">掷实心球(米)：</view>
         <input class="subject-input" type='text' name="input" value="" placeholder='123' />
       </view>
+
+      <!-- 提交 -->
+      <view class="stepBtns row submit">
+        <view catchtap='toStep2'>
+          <view class='stepBtn'>
+              上一步
+          </view>
+        </view>
+        <button catchtap='toReport' class='stepBtn' formType="submit">提交</button>
+        <!-- <button class='stepBtn' formType="reset">重置</button> -->
+      </view>
     </view>
 
-    <!-- 提交 -->
-    <view class="stepBtns row">
-      <button class='stepBtn' formType="submit">提交</button>
-      <button class='stepBtn' formType="reset">重置</button>
-    </view>
+    
   </form>
 
 </view>
