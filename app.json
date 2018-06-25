@@ -1,10 +1,10 @@
 {
   "pages":[
-    "pages/report/report",
+    "pages/video-detail/video-detail",
     "pages/index/index",
     "pages/video/video",
     "pages/evaluate/evaluate",
-    
+    "pages/report/report",
     "pages/school/school"
     
   ],
