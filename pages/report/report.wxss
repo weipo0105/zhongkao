@@ -329,7 +329,7 @@
   height: 100%;
 } */
 .teach-video-title text{
-  color: red;
+  color: #fc631d;
   font-size: 38rpx;
   padding-left: 15rpx;
 }
