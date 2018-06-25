@@ -222,8 +222,11 @@
   height: 100%;
   background: #212633;
   color: #fff;
-  border-bottom: 1rpx dashed #1db4f5;
+  /* border-bottom: 1rpx dashed #1db4f5; */
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .advice-title{
   width: 60%;
@@ -236,10 +239,10 @@
   color: #38b720;
 }
 .advice-view{
-  width: 100%;
+  width: 650rpx;
   height: 100%;
   text-align: left;
-  padding-left: 20rpx;
+  /* padding-left: 20rpx; */
   padding-bottom: 20rpx;
   padding-top: 15rpx;
   border-bottom: 1rpx dashed #cccccc;
@@ -274,25 +277,78 @@
 
 
 /* 教学训练视频课程 */
-.video-title{
-  width: 60%;
-  height: 70rpx;
-  line-height: 70rpx;
-  text-align: left;
-  margin-left: 80rpx;
-  font-size: 32rpx;
-  font-weight: bold;
-  color: #38b720;
-}
-
 .video{
   width: 100%;
-  height: 770rpx;
+  height: 100%;
   background: #333333;
   color: #fff;
   border-bottom: 1rpx dashed #1db4f5;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+
+  
+}
+.video-title{
+  width: 650rpx;
+  height: 70rpx;
+  line-height: 70rpx;
   text-align: center;
+  margin-top: 35rpx; 
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #212633;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.video-title-bottom-line{
+  width: 650rpx;
+  height: 69rpx;
+  border-bottom: 4rpx solid #fff;
+  display: flex;
+  justify-content: center;
+}
+.video-title-text{
+  width:400rpx;
+  height:69rpx;
+  background: #fff;
+}
+.teach-video{
+  width: 650rpx;
+  height: 150rpx;
+  /* background: red;  */
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx dotted #cccccc; 
+}
+/* .teach-video-container{
+  width: 100%;
+  height: 100%;
+} */
+.teach-video-title text{
+  color: red;
+  font-size: 38rpx;
+  padding-left: 15rpx;
+}
+.teach-video-icon-view{
+  width:130rpx;
+  height:65rpx;
+  border: 1rpx dashed #4bdc95;
+  margin-right: 25rpx;
+}
+.teach-video-icon-view image{
+  width:127rpx;
+  height:62rpx;
 }
 
+.footer{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 60rpx;
+  margin-left: 90rpx;
+}
 
 

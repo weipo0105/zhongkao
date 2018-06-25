@@ -152,10 +152,58 @@
     </view>
     
   </view>
-  <view class='video'>
+  <view class='video column'>
     <view class='video-title'>
-      <text>教学训练视频课程:</text>
+      <view class='video-title-bottom-line'>
+        <view class='video-title-text'>
+          <text>教学训练视频课程</text>
+        </view>
+      </view>
     </view>
+
+    
+    <view class='teach-video row'>
+      <view class='teach-video-title'>1.<text>足球</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>2.<text>篮球</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>3.<text>排球</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>4.<text>引体向上</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>5.<text>立定跳远</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>6.<text>仰卧起坐</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>7.<text>前抛实心球</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='teach-video row'>
+      <view class='teach-video-title'>8.<text>1000米/800米</text></view>
+      <view class='teach-video-icon-view'><image src='/images/report/video-icon.jpg'></image></view>
+    </view>
+
+    <view class='footer'>知星科技</view>
     
   </view>
+  
 </view>
