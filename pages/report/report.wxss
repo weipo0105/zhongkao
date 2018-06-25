@@ -69,7 +69,7 @@
 
 .score-evaluate{
   width: 100%;
-  height: 500rpx;
+  height: 450rpx;
   background: #212633;
   color: #fff;
   border-bottom: 1rpx dashed #1db4f5;
@@ -219,12 +219,72 @@
 /* 教学与训练建议 */
 .advice{
   width: 100%;
-  height: 520rpx;
+  height: 100%;
   background: #212633;
   color: #fff;
   border-bottom: 1rpx dashed #1db4f5;
   text-align: center;
 }
+.advice-title{
+  width: 60%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  margin-left: 80rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #38b720;
+}
+.advice-view{
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+  padding-top: 15rpx;
+  border-bottom: 1rpx dashed #cccccc;
+}
+.advice-view-title{
+  font-size: 28rpx;
+
+}
+.advice-view-content1{
+  text-align: left;
+  justify-content: space-around;
+  
+}
+.advice-view-content2{
+  width: 70%;
+  font-size: 25rpx;
+  text-align: left;
+  padding-left: 20rpx;
+   /* background: gray;  */
+}
+.video-icon-view{
+  width:130rpx;
+  height:65rpx;
+  border: 1rpx dashed #4bdc95;
+  margin-right: 25rpx;
+  align-self: flex-end;
+}
+.advice-view-content1 image{
+  width:127rpx;
+  height:62rpx;
+}
+
+
+/* 教学训练视频课程 */
+.video-title{
+  width: 60%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  margin-left: 80rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #38b720;
+}
+
 .video{
   width: 100%;
   height: 770rpx;

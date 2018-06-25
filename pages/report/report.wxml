@@ -96,6 +96,66 @@
       <text>该学生：体重偏重，上肢力量较弱，下肢爆发力较弱</text>
     </view>
   </view>
-  <view class='advice'>教学与训练建议(定制化方案)</view>
-  <view class='video'>教学训练视频课程</view>
+  <view class='advice'>
+    <view class='advice-title'>
+      <text>教学与训练建议(定制化方案):</text>
+    </view>
+    <view class='advice-view column'>
+      <view class='advice-view-title'>1.减重训练</view>
+      <view class='advice-view-content1 row'>
+        <view class='advice-view-content2'>
+          <text>
+          训练负荷：每个动作10-15次为一组，每组间隔5分钟 
+          训练强度：每次练习3组
+          </text>
+        </view>
+        
+          <view class='video-icon-view'>
+            <image src='/images/report/video-icon.jpg'></image>
+          </view>
+        
+      </view>
+    </view>
+
+    <view class='advice-view column'>
+      <view class='advice-view-title'>2.上肢力量训练</view>
+      <view class='advice-view-content1 row'>
+        <view class='advice-view-content2'>
+          <text>
+          训练负荷：每个动作10-15次为一组，每组间隔5分钟
+          训练强度：每次练习3组
+          </text>
+        </view>
+        
+          <view class='video-icon-view'>
+            <image src='/images/report/video-icon.jpg'></image>
+          </view>
+        
+      </view>
+    </view>
+
+    <view class='advice-view column'>
+      <view class='advice-view-title'>3.下肢爆发力训练</view>
+      <view class='advice-view-content1 row'>
+        <view class='advice-view-content2'>
+          <text>
+          训练负荷：每个动作10次为一组，每组间隔3分钟
+          训练强度：每次练习3组
+          </text>
+        </view>
+        
+          <view class='video-icon-view'>
+            <image src='/images/report/video-icon.jpg'></image>
+          </view>
+        
+      </view>
+    </view>
+    
+  </view>
+  <view class='video'>
+    <view class='video-title'>
+      <text>教学训练视频课程:</text>
+    </view>
+    
+  </view>
 </view>
