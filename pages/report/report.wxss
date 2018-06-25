@@ -152,8 +152,10 @@
 }
 .chart text{
   margin-top: 55rpx;
-  color: #fff;
+  color: #4bdc95;
 }
+
+/* 身体素质综合评价 */
 .body-evaluate{
   width: 100%;
   height: 540rpx;
@@ -162,6 +164,59 @@
   border-bottom: 1rpx dashed #1db4f5;
   text-align: center;
 }
+.body-evaluate-title{
+  width: 40%;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: left;
+  margin-left: 80rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #38b720;
+}
+.b-table{
+  width: 100%;
+  height: 400rpx;
+  margin-top: 10rpx;
+  color: #cccccc;
+  font-size: 32rpx;
+}
+.point{
+  font-size:95rpx;
+  line-height:32rpx;
+}
+.b-tr{
+  width: 100%;
+  height: 65rpx;
+}
+.b-td{
+  height: 65rpx;
+}
+.b-td-width-1{
+  width: 10%;
+  padding-left: 10rpx;
+}
+.b-td-width-2{
+  
+  width: 25%;
+}
+.b-td-width-3{
+  width: 40%;
+}
+.b-td-width-4{
+  width: 25%;
+  padding-right: 25rpx;
+}
+.b-td image{
+  width:100%;
+  height:30rpx;
+}
+.body-evaluate-result{
+  color: #4bdc95;
+  font-size: 28rpx;
+}
+
+/* 教学与训练建议 */
 .advice{
   width: 100%;
   height: 520rpx;
@@ -178,4 +233,6 @@
   border-bottom: 1rpx dashed #1db4f5;
   text-align: center;
 }
+
+
 

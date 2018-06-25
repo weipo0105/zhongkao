@@ -50,7 +50,52 @@
         </view>
     </view>
   </view>
-  <view class='body-evaluate'>身体素质综合评价</view>
+  <view class='body-evaluate'>
+    <view class='body-evaluate-title'>
+      <text>身体素质综合评价:</text>
+    </view>
+    <view class='b-table column'>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>身高</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate1.png'></image></view>
+        <view class='b-td  b-td-width-4 progress'><text>175 cm</text></view>
+      </view>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>体重</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate2.png'></image></view>
+        <view class='b-td  b-td-width-4'><text>75 kg</text></view>
+      </view>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>体脂</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate3.png'></image></view>
+        <view class='b-td  b-td-width-4'><text>30 mm</text></view>
+      </view>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>BMI</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate4.png'></image></view>
+        <view class='b-td  b-td-width-4'><text>28</text></view>
+      </view>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>肺活量</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate5.png'></image></view>
+        <view class='b-td  b-td-width-4'><text>4000 ml</text></view>
+      </view>
+      <view class='b-tr row'>
+        <view class='b-td  b-td-width-1 point'>·</view>
+        <view class='b-td  b-td-width-2'><text>身体素质</text></view>
+        <view class='b-td  b-td-width-3'><image src='/images/report/body-evaluate6.png'></image></view>
+        <view class='b-td  b-td-width-4'><text>C</text></view>
+      </view>
+    </view>
+    <view class='body-evaluate-result'>
+      <text>该学生：体重偏重，上肢力量较弱，下肢爆发力较弱</text>
+    </view>
+  </view>
   <view class='advice'>教学与训练建议(定制化方案)</view>
   <view class='video'>教学训练视频课程</view>
 </view>
