@@ -4,7 +4,7 @@
     <view><text class='video-info-item'>学校：</text>北京市海淀第一小学</view>
     <view><text  class='video-info-item'>城市：</text>北京</view>
   </view>
-  <view class='video-data'>
+  <view class='video-data' catchtap='onVideoDetail'>
     <image class='video-img' src='/images/video/lanqiu-xiaoren.png'></image>
     <view class='video-title-learn'>
       <view class='video-title'>篮球运球上篮</view>
@@ -15,7 +15,7 @@
 
   <view class='delimiter-level'></view>
 
-  <view class='video-data'>
+  <view class='video-data' catchtap='onVideoDetail'>
     <image class='video-img' src='/images/video/lanqiu-xiaoren.png'></image>
     <view class='video-title-learn'>
       <view class='video-title'>篮球运球上篮</view>
@@ -26,7 +26,7 @@
 
   <view class='delimiter-level'></view>
 
-  <view class='video-data'>
+  <view class='video-data' catchtap='onVideoDetail'>
     <image class='video-img' src='/images/video/lanqiu-xiaoren.png'></image>
     <view class='video-title-learn'>
       <view class='video-title'>篮球运球上篮</view>
