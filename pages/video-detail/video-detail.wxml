@@ -20,25 +20,29 @@
 
     <!-- 讲师介绍部分 -->
     <view class='teacher-info row'>
-      <view class='teacher-info-header level-center'>
+      <view class='teacher-info-header'>
         <view class='teacher-info-title '>讲师介绍</view>
-        <view class='show-hide'>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <text>收起</text>
+        <view class='show-hide' catchtap='onHide'>
+          <image src="/images/video-detail/{{arrow=='up'?'arrow-up':'arrow-down'}}.png"></image>
+          <text>{{showText=='收起'?'收起':'展开'}}</text>
         </view>
       </view>
+    </view>
 
+    <!-- 讲师简介view -->
+    <view class="{{isShow?'show':'hide'}}">
       <view class='teacher-info-detail column vertical-center'>
         <image src='/images/video-detail/teacher-pic.png'></image>
         <text>徐博</text>
-      </view>
-
-      <view class='teacher-info-intro'>
-        <text>
-          北京体育大学教授，日本体育大学高级访问学者，曾任缅甸国家女篮主教练。
-        </text>
+        <view class='teacher-info-intro'>
+          <text>
+            北京体育大学教授，日本体育大学高级访问学者，曾任缅甸国家女篮主教练。
+          </text>
+        </view> 
       </view>
     </view>
+    <view class='line'></view>
+
   </view>
 
 

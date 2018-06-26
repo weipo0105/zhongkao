@@ -24,6 +24,12 @@
   justify-content: center;
   align-items: center;
 }
+.hide{
+  display: none;
+}
+.show{
+  display: block;
+}
 
 /* 视频详情  */
 .video-detail-container{
@@ -51,7 +57,7 @@
   background: #efefef;  
 }
 .video-info-title{
-  width: 85%;
+  width: 90%;
   height: 60rpx;
   margin-top: 20rpx; 
   margin-left: 30rpx;
@@ -62,7 +68,7 @@
 .video-info-playdata{
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  width: 90%;
   height: 55rpx;
   padding-left: 2rpx;
   padding-right: 2rpx;
@@ -72,13 +78,14 @@
   border-bottom: 4rpx solid #dddddd;
 }
 
+/* 讲师简介 */
 .teacher-info{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .teacher-info-header{
-  width: 85%;
+  width: 217%;
   height: 55rpx;
   display: flex;
   flex-direction: row;
@@ -86,11 +93,9 @@
   align-self: center;
   padding-top: 20rpx;
   font-size: 38rpx;
-  /* background: red; */
+  /* background: red;  */
 }
-.teacher-info-title{
-  
-}
+
 /* 收起/展开图标的控制 */
 .show-hide{
   display: flex;
@@ -104,14 +109,17 @@
   height:40rpx;
   margin-right:18rpx;
 }
-
-
-.teacher-info-detail image{
-  width: 235rpx;
-  height: 240rpx;
+.teacher-info-detail-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .teacher-info-detail{
   align-self: center;
+}
+.teacher-info-detail image{
+  width: 235rpx;
+  height: 240rpx;
 }
 .teacher-info-detail text{
   margin-top: 15rpx;
@@ -123,7 +131,13 @@
   align-self: center;
   padding-left: 15rpx;
   font-size: 32rpx;
+  /* border-bottom: 4rpx solid #dddddd; */
+}
+.line{
+  width: 90%;
   border-bottom: 4rpx solid #dddddd;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
 }
 
 /* 相关视频部分 */
