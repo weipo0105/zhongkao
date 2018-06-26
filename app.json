@@ -1,9 +1,9 @@
 {
   "pages":[
-    "pages/video-detail/video-detail",
+    
     "pages/index/index",
     "pages/video/video",
-    
+    "pages/video-detail/video-detail",
     "pages/evaluate/evaluate",
     "pages/report/report",
     "pages/school/school"
