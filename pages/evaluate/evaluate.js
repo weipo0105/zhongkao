@@ -7,7 +7,9 @@ Page({
   data: {
     showView1: true,
     showView2: false,
-    showView3: false
+    showView3: false,
+    region: ['北京市', '北京市', '全部'],
+    customItem: '全部'
   },
 
   /**
@@ -44,6 +46,14 @@ Page({
     wx.navigateTo({
       url:'/pages/report/report'
     });
+  },
+  bindRegionChange:function(option){
+    //console.log(option.detail.value);
+    this.setData({
+      region:option.detail.value
+    }
+ 
+    );
   }
-
+  
 })
