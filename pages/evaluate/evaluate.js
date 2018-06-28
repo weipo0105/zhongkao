@@ -54,6 +54,9 @@ Page({
     }
  
     );
+  },
+  formSubmit:function(option){
+    console.log(option);
   }
   
 })
