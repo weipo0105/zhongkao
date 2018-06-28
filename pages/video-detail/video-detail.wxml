@@ -22,7 +22,7 @@
     <view class='teacher-info row'>
       <view class='teacher-info-header'>
         <view class='teacher-info-title '>讲师介绍</view>
-        <view class='show-hide' catchtap='onHide'>
+        <view class='show-hide' catchtap='onTeacherShowHide'>
           <image src="/images/video-detail/{{arrow=='up'?'arrow-up':'arrow-down'}}.png"></image>
           <text>{{showText=='收起'?'收起':'展开'}}</text>
         </view>
@@ -30,7 +30,7 @@
     </view>
 
     <!-- 讲师简介view -->
-    <view class="{{isShow?'show':'hide'}}">
+    <view class="{{isTeacherShow?'show':'hide'}}">
       <view class='teacher-info-detail column vertical-center'>
         <image src='/images/video-detail/teacher-pic.png'></image>
         <text>徐博</text>
@@ -42,222 +42,55 @@
       </view>
     </view>
     <view class='line'></view>
-
   </view>
 
 
-  <!-- 相关视频部分 -->
+  <!-- 相关视频部分 start -->
   <view class='video-relative'>
-
   <!-- 考试技术动作 -->
     <view class='video-relative-cate'><text>考试技术动作</text></view>
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>连续运球上篮</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
+    <view class='video-item-container' wx:for='{{skilledMovement}}'>
+      <view class='video-relative-item' >
+        <view class='video-relative-item-thumb'><image src='{{item.videoThumb}}'></image></view>
+        <view class='video-relative-item-title'><view>{{item.title}}</view></view>
+        <view class='video-relative-item-intro show-hide'>
+          <view catchtap='onIntroShowHide' data-videoId='{{item.videoId}}' data-showNum="{{'show'+item.videoId}}">
+            <image src='/images/video-detail/arrow-up.png'></image>
+            <view>简介</view>
+          </view>
         </view>
       </view>
-    </view>
-    
-    <!-- 专项训练 -->
-    <view class='video-relative-cate'><text>考试技术动作</text></view>
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>左右手连续运球上篮</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
+      <!-- 简介内容 -->
+      <view class='jianjie' >
+        <view class="video-intro-text show">
+          <rich-text nodes="{{item.videoIntro}}"></rich-text>
         </view>
+        <view class='line'></view>
       </view>
     </view>
 
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>左右手运球折返跑</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
+    <!-- --------------------------------------------------------------------  -->
+    <!-- <view class='video-relative-cate'><text>考试技术动作2</text></view>
+    <view class='video-item-container' wx:for='{{skilledMovement}}'>
+      <view class='video-relative-item' >
+        <view class='video-relative-item-thumb'><image src='{{item.videoThumb}}'></image></view>
+        <view class='video-relative-item-title'><view>{{item.title}}</view></view>
+        <view class='video-relative-item-intro show-hide'>
+          <view>
+            <image src='/images/video-detail/arrow-up.png'></image>
+            <view>简介</view>
+          </view>
         </view>
       </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>篮下连续投篮</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
+      
+      <view class='jianjie ' >
+        <view class='video-intro-text hide'>
+          <rich-text nodes="{{item.videoIntro}}" bindtap="tap"></rich-text>
         </view>
+        <view class='line'></view>
       </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>原地高运球</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>原地低运球</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>胯下八字运球</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <!-- 体能训练 -->
-    <view class='video-relative-cate'><text>体能训练</text></view>
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>见线折返跑练习</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>单腿跳</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    
-    <!-- 拉伸放松 -->
-    <view class='video-relative-cate'><text>拉伸放松</text></view>
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压胫骨前肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view> 泡沫轴按压骨内侧肌 </view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压股四头肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压股外侧肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压腘绳肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压上背部</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压臀大肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压下背部</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
-
-    <view class='video-relative-item'>
-      <view class='video-relative-item-thumb'><image src='/images/video-detail/video-thumb.png'></image></view>
-      <view class='video-relative-item-title'><view>泡沫轴按压小腿三头肌</view></view>
-      <view class='video-relative-item-intro show-hide'>
-        <view>
-          <image src='/images/video-detail/arrow-up.png'></image>
-          <view>简介</view>
-        </view>
-      </view>
-    </view>
+    </view> -->
+    <!-- --------------------------------------------------------------------  -->
 
   </view>
-
-  <!-- 专项训练 -->
-  
 </view>

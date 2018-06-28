@@ -1,37 +1,54 @@
 // pages/video-detail/video-detail.js
+var videoDataList = require('../../data/video-data.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    isShow:true,
-    arrow:'up',
-    showText:'收起'
+    isTeacherShow :true,
+    arrow :'up',
+    showText :'收起',
+    showData: {},
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var skilledMovement = videoDataList.videoList;
+    this.setData({
+      skilledMovement: skilledMovement
+    });
+
+    wx.getStorageSync('showData');
   },
 
-  onHide:function(){
-    var isShow = this.data.isShow;
-    if (isShow){
+  onTeacherShowHide:function(){
+    var isTeacherShow = this.data.isTeacherShow;
+    if (isTeacherShow){
       this.setData({
-        isShow: false,
+        isTeacherShow: false,
         arrow: 'down',
         showText: '展开'
       });
     }else{
       this.setData({
-        isShow: true,
+        isTeacherShow: true,
         arrow: 'up',
-        showText: '收起'
+        showText: '收起',
+        show1:false
       });
     }
+  },
+  onIntroShowHide:function(option){
+    
+    var videoId = option.currentTarget.dataset.videoid;
+    var showNum = option.currentTarget.dataset.shownum;
+    
+    //console.log(this.data);
+  
     
   }
 })
