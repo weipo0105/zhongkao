@@ -9,8 +9,10 @@ Page({
     isTeacherShow :true,
     arrow :'up',
     showText :'收起',
-    showData: {},
-    
+    showData:{
+      videoId:'',
+      isIntroShow: false
+    }
   },
 
   /**
@@ -18,11 +20,11 @@ Page({
    */
   onLoad: function (options) {
     var skilledMovement = videoDataList.videoList;
+    console.log(skilledMovement);
+    
     this.setData({
       skilledMovement: skilledMovement
     });
-
-    wx.getStorageSync('showData');
   },
 
   onTeacherShowHide:function(){
@@ -38,7 +40,7 @@ Page({
         isTeacherShow: true,
         arrow: 'up',
         showText: '收起',
-        show1:false
+        showData:[]
       });
     }
   },
@@ -46,9 +48,27 @@ Page({
     
     var videoId = option.currentTarget.dataset.videoid;
     var showNum = option.currentTarget.dataset.shownum;
-    
-    //console.log(this.data);
-  
-    
+    if(this.data.showData.isIntroShow){
+      this.setData({
+        showData: {
+          videoId: videoId,
+          isIntroShow: false
+        }
+      });
+    }else{
+      this.setData({
+        showData: {
+          videoId: videoId,
+          isIntroShow: true
+        }
+      });
+    }
+  },
+  toThisVideoDetail:function(option){
+    var videoId = option.currentTarget.dataset.id;
+    //console.log(option);return;
+    wx.navigateTo({
+      url: '/pages/video-detail/video-detail?id='+videoId,
+    })
   }
 })

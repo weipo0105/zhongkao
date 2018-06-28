@@ -48,27 +48,30 @@
   <!-- 相关视频部分 start -->
   <view class='video-relative'>
   <!-- 考试技术动作 -->
-    <view class='video-relative-cate'><text>考试技术动作</text></view>
-    <view class='video-item-container' wx:for='{{skilledMovement}}'>
-      <view class='video-relative-item' >
-        <view class='video-relative-item-thumb'><image src='{{item.videoThumb}}'></image></view>
-        <view class='video-relative-item-title'><view>{{item.title}}</view></view>
-        <view class='video-relative-item-intro show-hide'>
-          <view catchtap='onIntroShowHide' data-videoId='{{item.videoId}}' data-showNum="{{'show'+item.videoId}}">
-            <image src='/images/video-detail/arrow-up.png'></image>
-            <view>简介</view>
+  <block wx:for="{{skilledMovement}}">
+      <view class='video-relative-cate'><text>{{item.cateName}}</text></view>
+      <block wx:for='{{item.cateDetail}}'>
+        <view class='video-item-container'>
+          <view class='video-relative-item' >
+            <view catchtap='toThisVideoDetail' data-id="{{item.videoId}}" class='video-relative-item-thumb'><image src='{{item.videoThumb}}'></image></view>
+            <view class='video-relative-item-title'><view>{{item.title}}</view></view>
+            <view class='video-relative-item-intro show-hide'>
+              <view catchtap='onIntroShowHide' data-videoId='{{item.videoId}}' data-showNum="{{'show'+item.videoId}}">
+                <image src="/images/video-detail/arrow-{{showData.isIntroShow && showData.videoId==item.videoId?'up':'down'}}.png"></image>
+                <view>{{showData.isIntroShow && showData.videoId==item.videoId?'收起':'展开'}}</view>
+              </view>
+            </view>
+          </view>
+          <!-- 简介内容 -->
+          <view class='jianjie' >
+            <view class="video-intro-text {{showData.isIntroShow && showData.videoId==item.videoId?'show':'hide'}}">
+              <rich-text nodes="{{item.videoIntro}}"></rich-text>
+            </view>
+            <view class='line'></view>
           </view>
         </view>
-      </view>
-      <!-- 简介内容 -->
-      <view class='jianjie' >
-        <view class="video-intro-text show">
-          <rich-text nodes="{{item.videoIntro}}"></rich-text>
-        </view>
-        <view class='line'></view>
-      </view>
-    </view>
-
+    </block>
+</block>
     <!-- --------------------------------------------------------------------  -->
     <!-- <view class='video-relative-cate'><text>考试技术动作2</text></view>
     <view class='video-item-container' wx:for='{{skilledMovement}}'>
