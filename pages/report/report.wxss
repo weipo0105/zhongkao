@@ -1,5 +1,6 @@
 .report-container{
-  
+  /* 防止左右滑动出现超出可视范围的白边 */
+  overflow-x: hidden;
 }
 /* commom */
 .row{

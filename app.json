@@ -1,8 +1,8 @@
 {
   "pages":[
-    
-    "pages/index/index",
     "pages/video/video",
+    "pages/index/index",
+    
     "pages/video-detail/video-detail",
     "pages/evaluate/evaluate",
     "pages/report/report",
